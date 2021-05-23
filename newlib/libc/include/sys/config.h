@@ -168,6 +168,14 @@
 #endif
 #endif
 
+#ifdef __dsPIC30__
+#define __SMALL_BITFIELDS
+#define MALLOC_ALIGNMENT 2
+#define _POINTER_INT int
+#define __BUFSIZ__ 16
+#define _REENT_SMALL
+#endif
+
 #ifdef __m32c__
 #define __SMALL_BITFIELDS
 #undef INT_MAX

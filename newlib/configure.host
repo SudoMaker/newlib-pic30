@@ -90,7 +90,7 @@ case "${target_optspace}:${host}" in
   yes:*)
     newlib_cflags="${newlib_cflags} -Os"
     ;;
-  :m32r-* | :d10v-* | :d30v-* | :avr-* | :m32c-* | :msp430*-* | :nds32* | :pru-* | :rl78-* )
+  :m32r-* | :d10v-* | :d30v-* | :avr-* | :m32c-* | :msp430*-* | :pic30* | :nds32* | :pru-* | :rl78-* )
     newlib_cflags="${newlib_cflags} -Os"
     ;;
   no:* | :*)
@@ -294,6 +294,9 @@ case "${host_cpu}" in
   or1k*|or1knd*)
 	machine_dir=or1k
 	have_init_fini=no
+	;;
+  pic30*)
+	machine_dir=pic30
 	;;
   powerpc*)
 	machine_dir=powerpc

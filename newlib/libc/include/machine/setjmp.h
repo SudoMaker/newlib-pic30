@@ -328,6 +328,11 @@ _BEGIN_STD_C
 #endif
 #endif
 
+#ifdef __dsPIC30__
+#define _JBLEN 22
+#define _JBTYPE unsigned int
+#endif
+
 #ifdef __RL78__
 /* Three banks of registers, SP, CS, ES, PC */
 #define _JBLEN (8*3+8)

@@ -18,7 +18,7 @@
 
 /* if do not have #include_next support, then we
    have to define the limits here. */
-# if !defined __GNUC__ || __GNUC__ < 2
+# if !defined __GNUC__ || __GNUC__ < 2 || defined __dsPIC30__
 
 #  ifndef _LIMITS_H
 #   define _LIMITS_H	1

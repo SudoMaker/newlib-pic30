@@ -1226,6 +1226,7 @@ case $cpu-$vendor in
 			| or32 \
 			| orion \
 			| picochip \
+			| pic30 \
 			| pdp10 | pdp11 | pj | pjl | pn | power \
 			| powerpc | powerpc64 | powerpc64le | powerpcle | powerpcspe \
 			| pru \

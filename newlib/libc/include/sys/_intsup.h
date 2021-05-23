@@ -68,14 +68,22 @@
 #elif (__INTPTR_TYPE__ == 1 || __INTPTR_TYPE__ == 3)
 #define _INTPTR_EQ_SHORT
 #else
+#ifdef __dsPIC30__
+#define _INTPTR_EQ_SHORT
+#else
 #error "Unable to determine type definition of intptr_t"
+#endif
 #endif
 #if (__INT32_TYPE__ == 4 || __INT32_TYPE__ == 6)
 #define _INT32_EQ_LONG
 #elif __INT32_TYPE__ == 2
 /* Nothing to define because int32_t is safe to print as an int. */
 #else
+#ifdef __dsPIC30__
+#define _INT32_EQ_LONG
+#else
 #error "Unable to determine type definition of int32_t"
+#endif
 #endif
 
 #if (__INT8_TYPE__ == 0)
